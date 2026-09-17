@@ -206,3 +206,17 @@
 @keyframes pulse { 50% { opacity:.45; } }
 @media (max-width:640px){.site-container{width:min(100% - 1.5rem,82rem)}.metric-cell{padding:1.35rem}.site-header{height:4.75rem}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+.hero-grid { background-image:linear-gradient(var(--inverse-border) 1px,transparent 1px),linear-gradient(90deg,var(--inverse-border) 1px,transparent 1px);background-size:6rem 6rem;mask-image:linear-gradient(to right,black,transparent 72%); }
+.hero-detection { position:absolute;right:2%;bottom:12%;width:min(26rem,32vw);padding:1.25rem;background:color-mix(in oklab,var(--interface) 84%,transparent);border:1px solid var(--inverse-border);backdrop-filter:blur(8px); }
+.hero-detection strong { display:block;margin-block:1.35rem .9rem;font:500 clamp(1.2rem,2vw,2rem)/1 var(--font-mono);letter-spacing:.08em; }
+.scan-line { position:absolute;left:0;right:0;top:0;height:1px;background:var(--primary);box-shadow:0 0 16px var(--primary);animation:scan 3.5s ease-in-out infinite; }
+.process-grid { display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--inverse-border); }
+.process-step { position:relative;display:grid;align-content:space-between;min-height:12rem;padding:1.5rem;border-right:1px solid var(--inverse-border); }
+.process-step::before { content:"";position:absolute;top:-4px;left:1.5rem;width:7px;height:7px;background:var(--primary); }
+.process-step span { font:400 .65rem/1 var(--font-mono);color:var(--primary); }.process-step strong{max-width:8rem;font-size:.8rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;}
+.form-control { min-height:3.25rem;width:100%;border:1px solid var(--input);background:transparent;padding:.8rem 1rem;font-size:.875rem;outline:none;transition:border-color .2s,box-shadow .2s; }
+.form-control:focus { border-color:var(--primary);box-shadow:0 0 0 2px color-mix(in oklab,var(--primary) 16%,transparent); }
+.form-control::placeholder { color:var(--muted-foreground); }
+@keyframes scan { 0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(8rem);opacity:1} }
+@media(max-width:900px){.hero-detection{display:none}.process-grid{grid-template-columns:1fr}.process-step{min-height:7rem;border-right:0;border-bottom:1px solid var(--inverse-border)}.process-step::before{top:1.5rem;left:-4px}}
