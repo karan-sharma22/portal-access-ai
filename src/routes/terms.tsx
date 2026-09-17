@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { PageIntro } from "@/components/portalis-site";
+export const Route=createFileRoute("/terms")({head:()=>({meta:[{title:"Terms — Portalis"},{name:"description",content:"Portalis website terms."},{property:"og:title",content:"Terms — Portalis"},{property:"og:description",content:"Portalis website terms."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary"}]}),component:Terms});
+function Terms(){return <><PageIntro eyebrow="Legal" title="Terms" copy="This page is reserved for the Portalis website terms."/><section className="site-container py-20"><p className="max-w-2xl text-sm leading-7 text-muted-foreground">Final terms should be reviewed and supplied before publication. Product imagery and interface data shown on this website are illustrative.</p></section></>}
