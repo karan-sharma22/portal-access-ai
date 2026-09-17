@@ -219,4 +219,7 @@
 .form-control:focus { border-color:var(--primary);box-shadow:0 0 0 2px color-mix(in oklab,var(--primary) 16%,transparent); }
 .form-control::placeholder { color:var(--muted-foreground); }
 @keyframes scan { 0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(8rem);opacity:1} }
+.tech-flow { display:grid;border:1px solid var(--border); }
+.tech-flow > div { display:grid;grid-template-columns:3rem 1fr;align-items:center;min-height:4.5rem;padding:0 1.25rem;border-bottom:1px solid var(--border); }
+.tech-flow > div:last-child { border-bottom:0; }.tech-flow span{font:400 .65rem/1 var(--font-mono);color:var(--primary)}.tech-flow strong{font-size:.78rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em}
 @media(max-width:900px){.hero-detection{display:none}.process-grid{grid-template-columns:1fr}.process-step{min-height:7rem;border-right:0;border-bottom:1px solid var(--inverse-border)}.process-step::before{top:1.5rem;left:-4px}}

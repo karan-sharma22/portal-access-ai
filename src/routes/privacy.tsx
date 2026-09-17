@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { PageIntro } from "@/components/portalis-site";
+export const Route=createFileRoute("/privacy")({head:()=>({meta:[{title:"Privacy — Portalis"},{name:"description",content:"Portalis privacy information."},{property:"og:title",content:"Privacy — Portalis"},{property:"og:description",content:"Portalis privacy information."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary"}]}),component:Privacy});
+function Privacy(){return <><PageIntro eyebrow="Legal" title="Privacy" copy="This page is reserved for the Portalis privacy policy."/><section className="site-container py-20"><p className="max-w-2xl text-sm leading-7 text-muted-foreground">The final policy will be added before the website begins collecting or transmitting personal information. The current demonstration form does not transmit submitted details.</p></section></>}

@@ -72,12 +72,12 @@ export function SiteFooter() {
         <div className="grid grid-cols-2 gap-8 text-sm">
           <div className="grid content-start gap-3">
             <span className="eyebrow text-inverse-muted-foreground">Explore</span>
-            {navItems.slice(0, 3).map((item) => <Link key={item.to} to={item.to} className="footer-link">{item.label}</Link>)}
+            {navItems.filter((item) => item.label !== "Why Portalis").map((item) => <Link key={item.to} to={item.to} className="footer-link">{item.label}</Link>)}
           </div>
           <div className="grid content-start gap-3">
             <span className="eyebrow text-inverse-muted-foreground">Enquiries</span>
-            <Link to="/contact" className="footer-link">Book a Demo</Link>
-            <Link to="/contact" className="footer-link">Contact</Link>
+            <Link to="/privacy" className="footer-link">Privacy</Link>
+            <Link to="/terms" className="footer-link">Terms</Link>
           </div>
         </div>
       </div>
